@@ -1,9 +1,10 @@
 <template>
   <div>
     <ul>
-      <li><a href="./a">Module-A</a></li>
-      <li><a href="./b">Module-B</a></li>
-      <li><a href="./c">Module-C</a></li>
+      <li><a href="/#/login">Login</a></li>
+      <li><a href="./a.html">Module-A</a></li>
+      <li><a href="./b.html">Module-B</a></li>
+      <li><a href="./c.html">Module-C</a></li>
     </ul>
   </div>
 </template>

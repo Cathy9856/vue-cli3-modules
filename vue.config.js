@@ -71,10 +71,10 @@ let objectProject = {
     filename: 'index.html',
     // 当使用 title 选项时，
     // template 中的 title 标签需要是 <title><%= htmlWebpackPlugin.options.title %></title>
-    title: 'Index Page',
+    title: 'Index Page'
     // 在这个页面中包含的块，默认情况下会包含
     // 提取出来的通用 chunk 和 vendor chunk。
-    chunks: ['chunk-vendors', 'chunk-common', 'index']
+    // chunks: ['chunk-vendors', 'chunk-common', 'index']
   },
   a: {
     // page 的入口
@@ -82,7 +82,7 @@ let objectProject = {
     // 模板来源
     template: 'public/index.html',
     // 在 dist/index.html 的输出
-    filename: 'a/index.html',
+    filename: 'a.html',
     // 当使用 title 选项时，
     // template 中的 title 标签需要是 <title><%= htmlWebpackPlugin.options.title %></title>
     title: 'A Page',
@@ -96,7 +96,7 @@ let objectProject = {
     // 模板来源
     template: 'public/index.html',
     // 在 dist/index.html 的输出
-    filename: 'b/index.html',
+    filename: 'b.html',
     // 当使用 title 选项时，
     // template 中的 title 标签需要是 <title><%= htmlWebpackPlugin.options.title %></title>
     title: 'B Page',
@@ -110,7 +110,7 @@ let objectProject = {
     // 模板来源
     template: 'public/index.html',
     // 在 dist/index.html 的输出
-    filename: 'c/index.html',
+    filename: 'c.html',
     // 当使用 title 选项时，
     // template 中的 title 标签需要是 <title><%= htmlWebpackPlugin.options.title %></title>
     title: 'C Page',
@@ -131,7 +131,8 @@ if (process.env.NODE_ENV === 'development') {
     : page[projectname] = objectProject[projectname]
 }
 module.exports = {
-  publicPath: './', // 官方要求修改路径在这里做更改，默认是根目录下，可以自行配置
+  publicPath: './',
+  outputDir: 'dist/' + projectname,
   pages: page,
   productionSourceMap: false,
   runtimeCompiler: true

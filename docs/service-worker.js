@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "precache-manifest.95078c682af45489cb0d2adf1904cc00.js"
+  "precache-manifest.19041bb3cc81a7a53c93b3a6f6f06df3.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "planb"});
